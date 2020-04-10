@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+#overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 2;
+  /*cursor: pointer;*/
+}
+
+.text-overlay{
+  background: url("https://user-images.githubusercontent.com/10569455/78952112-6cfc8300-7aa2-11ea-98d4-c4111b49ba22.png");
+  background-size: cover;
+  position: absolute;
+  height: 256px;
+  width: 1114px;
+  top: 50%;
+  left: 50%;
+  /*font-size: 50px;*/
+  /*color: white;*/
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+}
+
+.top-left {
+  position: absolute;
+  top: 10px;
+  left:10px;
+}
+
+.top-right-button {
+  position: absolute;
+  top: 10px;
+  right:10px;
+  cursor: pointer;
+}
+
+.bottom-right {
+  /*background-position: 50% 50%;*/
+  position: absolute;
+  bottom: 10px;
+  right:16px;
+}
+
+</style>
+</head>
+<body>
+
+<div id="overlay">
+  <div class="text-overlay">
+    <a class="top-left" href="https://www.origene.com/covid-19-readiness"><img src="https://user-images.githubusercontent.com/10569455/78952132-87366100-7aa2-11ea-8a27-fb70f5c47e3b.png" style="width:513px; height:95px" title="covid-19-readiness" alt="covid-19-readiness"></a>
+    <a class="top-right-button" onclick="off()"><img src="https://user-images.githubusercontent.com/10569455/78952191-c369c180-7aa2-11ea-9899-5b91a0d44936.png" style="width:40px; height:40px"  alt="close"></a>
+<!--     <button class="top-right-button">
+    </button> -->
+    <a class="bottom-right" href="https://www.origene.com/research-areas/covid-19"><img src="https://user-images.githubusercontent.com/10569455/78952225-ded4cc80-7aa2-11ea-890d-8075dce20b33.png" style="width:193px; height:40px" title="view-products" alt="close"></a>
+  </div>
+</div>
+
+<div style="padding:20px">
+  <h2>Overlay with Text</h2>
+  <button onclick="on()">Turn on overlay effect</button>
+</div>
+
+<script>
+function on() {
+  document.getElementById("overlay").style.display = "block";
+}
+
+function off() {
+  document.getElementById("overlay").style.display = "none";
+}
+</script>
+   
+</body>
+</html> 
